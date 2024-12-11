@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Componente Hero ({{ name }})</h3>
+  </div>
+  <div class="card-body">
+    <dl>
+      <dt>Name</dt>
+      <dd>{{ name }}</dd>
+
+      <dt>Age</dt>
+      <dd>{{ age }}</dd>
+
+      <dt>Method</dt>
+      <dd>{{ getHeroDescription() }}</dd>
+
+      <dt>Capitalized</dt>
+      <dd>{{ capitalizeName }}</dd>
+    </dl>
+  </div>
+  <div class="card-footer">
+    <div class="row g-1">
+      <div class="col-4">
+        <button name="BtnChangeName" class="btn btn-primary btn-sm w-100" *ngIf="name !== 'Spiderman'"
+          (click)="changeHero()">
+          <span class="text-capitalize">Change Name</span>
+        </button>
+      </div>
+      <div class="col-4">
+        <button name="BtnChangeAge" class="btn btn-success btn-sm w-100" *ngIf="age !== 20" (click)="changeAge()">
+          <span class="text-capitalize">Change Age</span>
+        </button>
+      </div>
+      <div class="col-4">
+        <button name="BtnReset" class="btn btn-warning btn-sm w-100" (click)="resetHero()">
+          <span class="text-capitalize">Reset</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

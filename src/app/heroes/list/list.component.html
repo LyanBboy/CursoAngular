@@ -1,0 +1,26 @@
+<div class="card mt-2">
+  <div class="card-header">
+    <h3>Componente List</h3>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let name of heroesName">{{ name }}</li>
+    </ul>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col-12">
+        <ng-template #nothingDeletedHero>
+          <span class="text-success">No ha eliminado nada.</span>
+        </ng-template>
+        <p *ngIf="deletedHero; else nothingDeletedHero">
+          Has eliminado:
+          <span class="text-danger">{{ deletedHero }}</span>
+        </p>
+      </div>
+      <div *ngIf="heroesName.length > 0" class="col-4">
+        <button name="BtnEliminar" class="btn btn-primary btn-sm w-100" (click)="removeLastHero()">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
