@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
-  public name:string = 'bbboy lyan';
-  public age:number = 18;
+  public name:string = 'Javier Yugcha';
+  public age:number = 33;
 
   constructor() {}
 
@@ -26,7 +26,7 @@ export class HeroComponent {
   }
 
   changeHero (): void {
-    this.name = 'Spiderman';
+    this.name = 'Batman';
   }
 
   changeAge () : void {
@@ -34,8 +34,8 @@ export class HeroComponent {
   }
 
   resetHero (): void {
-    this.name = 'bboy lyan';
-    this.age = 18;
+    this.name = 'Javier Yugcha';
+    this.age = 33;
   }
 
 }

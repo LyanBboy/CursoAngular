@@ -6,9 +6,9 @@
     <div class="row">
       <dbz-list [characterList]="getCharacters"
       (onDeleteId)="onDeleteCharacter($event)"></dbz-list>
-      <dbz-add-character (onNewEmiter)="onNewCharactaer($event)"></dbz-add-character>
+      <div class="my-2">
+        <dbz-add-character (onNewEmiter)="onNewCharactaer($event)"></dbz-add-character>
+      </div>
     </div>
-  </div>
-  <div class="card-footer">
   </div>
 </div>
