@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    <h3>DRAGON BALL Z CHARACTERS</h3>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <dbz-list [characterList]="getCharacters"
+      (onDeleteId)="onDeleteCharacter($event)"></dbz-list>
+      <dbz-add-character (onNewEmiter)="onNewCharactaer($event)"></dbz-add-character>
+    </div>
+  </div>
+  <div class="card-footer">
+  </div>
+</div>
