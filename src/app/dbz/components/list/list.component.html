@@ -13,7 +13,7 @@
         'list-group-item-primary' : isEven,
         'list-group-item-dark' : isLast
          }">
-      <span class="text-primary">{{ character.id ?? "none" }}. </span>
+      <span class="text-primary">{{ character.id?.substring(1,5) ?? "none" }}. </span>
       <span class="text-success fw-bold">{{ character.name }} </span>
       <span><b>Power: </b> {{ character.power }} </span>
       <button (click)="onDeleteCharacter(character.id)" type="button" name="BtnEliminar" class="btn btn-danger btn-sm">X </button>
