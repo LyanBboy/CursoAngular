@@ -1,0 +1,22 @@
+<div class="col-12">
+  <h3>List characters</h3>
+  <ul class="list-group">
+    <li *ngFor="
+      let character of characterList;
+      let idx = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      let isOdd = odd;"
+      class="list-group-item d-flex justify-content-between"
+      [ngClass]="{
+        'list-group-item-primary' : isEven,
+        'list-group-item-dark' : isLast
+         }">
+      <span class="text-primary">{{ character.id ?? "none" }}. </span>
+      <span class="text-success fw-bold">{{ character.name }} </span>
+      <span><b>Power: </b> {{ character.power }} </span>
+      <button (click)="onDeleteCharacter(character.id)" type="button" name="BtnEliminar" class="btn btn-danger btn-sm">X </button>
+    </li>
+  </ul>
+</div>
